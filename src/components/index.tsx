@@ -1,0 +1,9 @@
+export { default as Header } from './Header';
+export { default as Footer } from './Footer';
+export { default as InfoHead } from './InfoHead';
+export { default as SuccessPartners } from './SuccessPartners';
+export { default as InfoAbout } from './InfoAbout';
+export { default as OurFeatures } from './OurFeatures';
+export { default as OurCustomers } from './OurCustomers';
+export { default as ContactUs } from './ContactUs';
+export { default as SliderOptional } from './SliderOptional';

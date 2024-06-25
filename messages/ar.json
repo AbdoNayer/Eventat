@@ -1,0 +1,40 @@
+{
+    "Header": {
+      "home": "الرئيسية",
+      "about": "من نحن",
+      "successPartners": "شركاء النجاح",
+      "ourCustomers": "عملائنا",
+      "contact": "تواصل معنا"
+    },
+    "InfoContent": {
+      "btnOrderNow": "أطلب النظام الأن",
+      "SystemExperience" : "تجربة النظام"
+    },
+    "SuccessPartners": {
+      "info" : "نبدع معاً في كل فعالية"
+    },
+    "About": {
+      "info" : "من هم إيفينتاتي"
+    },
+    "OurCustomers" : {
+      "info" : "نبذة عن عملائنا المميزين"
+    },
+    "ContactUs" : {
+      "info" : "تواصل معنا الأن واطلب النظام",
+      "name" : "الاسم",
+      "phone" : "رقم الجوال",
+      "massage" : "الرساله",
+      "sent" : "ارسال"
+    },
+    "OurFeatures" : {
+      "title" : "مميزاتنا",
+      "info" : "أفضل المميزات علي الإطلاق",
+      "createMore" : "إنشاء أكثر من حدث",
+      "controlIn" : "التحكم في الفترات",
+      "controlCountTic" : "التحكم في عدد التذاكر",
+      "controlDataTic" : "التحكم في محتوي التذكرة",
+      "pointTic" : "نقطة بيع لحجز التذكرة",
+      "reports" : "إحصائيات وتقارير"
+    }
+  }
+  

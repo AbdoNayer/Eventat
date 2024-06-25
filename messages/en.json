@@ -1,0 +1,39 @@
+{
+  "Header": {
+    "home": "Home",
+    "about": "About Us",
+    "successPartners": "Success Partners",
+    "ourCustomers": "Our Customers",
+    "contact": "Contact Us"
+  },
+  "InfoContent": {
+    "btnOrderNow": "Order now",
+    "SystemExperience": "System experience"
+  },
+  "SuccessPartners": {
+    "info": "We create together in every event"
+  },
+  "About": {
+    "info": "Who are Eventate?"
+  },
+  "OurCustomers": {
+    "info": "About our distinguished clients"
+  },
+  "ContactUs": {
+    "info": "Contact us now and order the order",
+    "name": "the name",
+    "phone": "Mobile number",
+    "massage": "the message",
+    "sent": "send"
+  },
+  "OurFeatures": {
+    "title": "Our advantages",
+    "info": "Best features ever",
+    "createMore": "Create more than one event",
+    "controlIn": "Interval control",
+    "controlCountTic": "Control the number of tickets",
+    "controlDataTic": "Control the content of the ticket",
+    "pointTic": "Point of sale for booking a ticket",
+    "reports": "Statistics and reports"
+  }
+}
