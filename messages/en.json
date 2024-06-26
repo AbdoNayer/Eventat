@@ -17,7 +17,8 @@
     "info": "Who are Eventate?"
   },
   "OurCustomers": {
-    "info": "About our distinguished clients"
+    "info": "About our distinguished clients",
+    "link" : "View Client Details"
   },
   "ContactUs": {
     "info": "Contact us now and order the order",
