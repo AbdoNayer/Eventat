@@ -1,11 +1,14 @@
-import { useTranslations } from 'next-intl';
+import { useMessages, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Links = () => {
-  const t = useTranslations();
+  // const t = useTranslations();
+  const t = useMessages();
   const selectActive = () => {
     console.log("selectActive");
   };
+
   return (
     <>
       {/* <motion.h1
@@ -16,15 +19,27 @@ const Links = () => {
       >
         home
       </motion.h1> */}
-      <ul className="flex items-center">
-        <li className={`text-white mx-3 cursor-pointer py-2 px-3 border-r-[0.5px] border-b-[0.5px] rounded-[5px]`}>{t("Header.home")}</li>
-        <li className={`text-white mx-3 cursor-pointer py-2 px-3`}>{t("Header.about")}</li>
-        <li className={`text-white mx-3 cursor-pointer py-2 px-3`}>{t("Header.successPartners")}</li>
-        <li className={`text-white mx-3 cursor-pointer py-2 px-3`}>{t("Header.ourCustomers")}</li>
-        <li className={`text-white mx-3 cursor-pointer py-2 px-3`}>{t("Header.contact")}</li>
+      <ul className="flex items-center md:flex-col">
+        <li
+          className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3 border-r-[0.5px] border-b-[0.5px] rounded-[5px]`}
+        >
+          <a href="#Home">{t("Header.home")}</a>
+        </li>
+        <li className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3`}>
+          <a href="#About">{t("Header.about")}</a>
+        </li>
+        <li className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3`}>
+          <a href="#successPartners">{t("Header.successPartners")}</a>
+        </li>
+        <li className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3`}>
+          <a href="#ourCustomers">{t("Header.ourCustomers")}</a>
+        </li>
+        <li className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3`}>
+          <a href="#Contact">{t("Header.contact")}</a>
+        </li>
       </ul>
     </>
   );
-}
+};
 
 export default Links;

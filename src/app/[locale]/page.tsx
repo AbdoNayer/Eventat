@@ -7,6 +7,8 @@ type Props = {
 
 const Home = ({ locale }: Props) => {
   const t = useTranslations("");
+  console.log('locale', locale)
+  console.log('t', t)
   return (
     <div className="">
       <InfoHead />

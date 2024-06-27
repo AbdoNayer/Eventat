@@ -19,7 +19,7 @@ const Index = () => {
     "/img/logo4.png",
   ];
   return (
-    <div className="bg-[#f4ecf8] pt-[45px] pb-[10px]">
+    <div id="successPartners" className="bg-[#f4ecf8] pt-[45px] pb-[10px]">
       <div className="container">
         <div className='relative before:lg:hidden before:absolute before:top-[33px] before:left-[110px] before:bg-gradient-to-r before:from-[#C168F4] before:w-[70%] before:h-[2px]'>
           <h4 className="text-[24px] font-bold">{t("Header.successPartners")}</h4>

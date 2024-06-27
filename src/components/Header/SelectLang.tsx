@@ -24,7 +24,7 @@ const SelectLang = ({ lang }: Props) => {
   return (
     <button
       onClick={() => changeLang(lang === "ar" ? "en" : "ar")}
-      className="w-[40px] h-[40px] flex items-center justify-center border rounded-sm text-white mx-3"
+      className="w-[40px] h-[40px] flex items-center justify-center border rounded-sm text-white mx-3 md:m-auto md:my-4"
     >
       {lang === "ar" ? "EN" : "AR"}
     </button>

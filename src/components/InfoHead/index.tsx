@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 const Index = () => {
   const t = useTranslations();
   return (
-    <div className="bg-[url('/img/bg.png')] bg-no-repeat h-screen bg-cover flex items-center justify-center">
+    <div id="Home" className="bg-[url('/img/bg.png')] bg-no-repeat h-screen bg-cover flex items-center justify-center md:h-auto md:py-[30px] md:pt-[140px]">
       <div className="container">
         <div className="text-center 2lg:max-w-[900px] m-auto">
           <h1 className="text-white font-bold text-[30px]">

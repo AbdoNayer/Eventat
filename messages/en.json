@@ -14,6 +14,7 @@
     "info": "We create together in every event"
   },
   "About": {
+    "title" : "About us",
     "info": "Who are Eventate?"
   },
   "OurCustomers": {
@@ -22,6 +23,7 @@
   },
   "ContactUs": {
     "info": "Contact us now and order the order",
+    "textHere" : "Text Here",
     "name": "the name",
     "phone": "Mobile number",
     "massage": "the message",
