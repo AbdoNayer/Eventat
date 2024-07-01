@@ -1,41 +1,34 @@
-import { useMessages, useTranslations } from "next-intl";
+"use client";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const Links = () => {
-  // const t = useTranslations();
-  const t = useMessages();
-  const selectActive = () => {
-    console.log("selectActive");
+type Props = {
+  messages: any;
+};
+
+const Links = ({ messages }: Props) => {
+  const [active , setActive] = useState('home');
+  const selectActive = (val:any) => {
+    setActive(val)
   };
 
   return (
     <>
-      {/* <motion.h1
-        className={`text-white mx-5`}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        home
-      </motion.h1> */}
       <ul className="flex items-center md:flex-col">
-        <li
-          className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3 border-r-[0.5px] border-b-[0.5px] rounded-[5px]`}
-        >
-          <a href="#Home">{t("Header.home")}</a>
+        <li onClick={()=> selectActive('home')} >
+          <a href="#Home" className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3 ${active === 'home' && 'border-r-[0.5px] border-b-[0.5px] rounded-[5px]'}`}>{messages.Header.home}</a>
         </li>
-        <li className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3`}>
-          <a href="#About">{t("Header.about")}</a>
+        <li onClick={()=> selectActive('about')}>
+          <a href="#About" className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3 ${active === 'about' && 'border-r-[0.5px] border-b-[0.5px] rounded-[5px]'}`}>{messages.Header.about}</a>
         </li>
-        <li className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3`}>
-          <a href="#successPartners">{t("Header.successPartners")}</a>
+        <li onClick={()=> selectActive('successPartners')}>
+          <a href="#successPartners" className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3 ${active === 'successPartners' && 'border-r-[0.5px] border-b-[0.5px] rounded-[5px]'}`}>{messages.Header.successPartners}</a>
         </li>
-        <li className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3`}>
-          <a href="#ourCustomers">{t("Header.ourCustomers")}</a>
+        <li onClick={()=> selectActive('ourCustomers')}>
+          <a href="#ourCustomers" className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3 ${active === 'ourCustomers' && 'border-r-[0.5px] border-b-[0.5px] rounded-[5px]'}`}>{messages.Header.ourCustomers}</a>
         </li>
-        <li className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3`}>
-          <a href="#Contact">{t("Header.contact")}</a>
+        <li onClick={()=> selectActive('contact')}>
+          <a href="#Contact" className={`text-white mx-3 md:my-4 cursor-pointer py-2 px-3 ${active === 'contact' && 'border-r-[0.5px] border-b-[0.5px] rounded-[5px]'}`}>{messages.Header.contact}</a>
         </li>
       </ul>
     </>

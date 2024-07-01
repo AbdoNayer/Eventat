@@ -15,3 +15,10 @@ textarea {
 html {
   scroll-behavior: smooth;
 }
+
+.header-active{
+  a, button{
+    color: black !important;
+    border-color: black !important;
+  }
+}

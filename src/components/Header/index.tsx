@@ -4,12 +4,14 @@ import SelectLang from "./SelectLang";
 import Links from "./Links";
 import ToggleMenu from "./ToggleMenu";
 import { useEffect, useState } from "react";
+import { getMessages } from "next-intl/server";
 
 type Props = {
   lang: any;
+  messages: any
 };
 
-const Index = ({ lang }: Props) => {
+const Index = ({ lang, messages }: Props) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
@@ -32,7 +34,7 @@ const Index = ({ lang }: Props) => {
   }, []);
   
   return (
-    <header className={`${isVisible && 'bg-white/55 shadow-xl'} fixed top-0 right-0 w-full p-5 md:px-4 z-[9999]`}>
+    <header className={`${isVisible && 'bg-white/55 shadow-xl header-active'} fixed top-0 right-0 w-full p-5 md:px-4 z-[9999]`}>
       <div className="container">
         <div className="flex items-center justify-center md:justify-between">
           <div className="flex-2 md:flex-none">
@@ -52,8 +54,8 @@ const Index = ({ lang }: Props) => {
                 lang === "ar" ? "md:right-0" : "md:left-0"
               } md:fixed md:top-0 md:bg-black md:w-[250px] md:h-full flex items-center md:flex-col`}
             >
-              {/* <Links /> */}
-              {/* <SelectLang lang={lang} /> */}
+              <Links messages={messages} />
+              <SelectLang lang={lang} />
             </div>
           </div>
         </div>

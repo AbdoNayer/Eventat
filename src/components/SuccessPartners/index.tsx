@@ -2,7 +2,11 @@ import { SliderOptional } from "..";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const Index = () => {
+type Props = {
+  lang: any;
+};
+
+const Index = ({ lang }: Props) => {
   const t = useTranslations();
   const imagesLogos = [
     "/img/logo1.png",
@@ -21,7 +25,7 @@ const Index = () => {
   return (
     <div id="successPartners" className="bg-[#f4ecf8] pt-[45px] pb-[10px]">
       <div className="container">
-        <div className='relative before:lg:hidden before:absolute before:top-[33px] before:left-[110px] before:bg-gradient-to-r before:from-[#C168F4] before:w-[70%] before:h-[2px]'>
+        <div className={`relative before:lg:hidden before:absolute before:top-[33px] ${lang === 'ar' ? 'before:bg-gradient-to-r before:left-[110px]' : 'before:bg-gradient-to-l before:right-[110px]'} before:from-[#C168F4] before:w-[70%] before:h-[2px]`}>
           <h4 className="text-[24px] font-bold">{t("Header.successPartners")}</h4>
           <p className="text-[#6432E3] mt-2 font-bold">{t("SuccessPartners.info")}</p>
         </div>
@@ -44,6 +48,7 @@ const Index = () => {
           sentData={{
             spaceBetween: 10,
             slidesPerView: 6,
+            lang: lang,
             breakpoints: {
               window320: "1",
               window768: "3",

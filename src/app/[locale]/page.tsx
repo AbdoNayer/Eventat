@@ -1,21 +1,20 @@
 import { ContactUs, InfoAbout, InfoHead, OurCustomers, OurFeatures, SuccessPartners } from "@/components";
-import { useTranslations } from "next-intl";
 
-type Props = {
-  locale: any;
-};
+interface Props {
+  params: {
+    locale: string;
+  };
+}
 
-const Home = ({ locale }: Props) => {
-  const t = useTranslations("");
+const Home = ({ params: { locale } }: Props) => {
   console.log('locale', locale)
-  console.log('t', t)
   return (
     <div className="">
       <InfoHead />
-      <SuccessPartners />
+      <SuccessPartners lang={locale} />
       <InfoAbout />
       <OurFeatures />
-      <OurCustomers />
+      <OurCustomers lang={locale} />
       <ContactUs />
     </div>
   );
